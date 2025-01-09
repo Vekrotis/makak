@@ -3,30 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none';">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Font Redirect</title>
+    <title>Výběr Fontu</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat&family=Quicksand&family=Itim&family=Dongle&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+        /* Specifický styl pro dynamickou změnu fontů */
+        .font-item {
+            font-size: 1.5rem;
+            padding: 15px 25px;
+            border-radius: 10px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s ease, background 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
         }
-        h1 {
-            color: #4CAF50;
+
+        .font-item:hover {
+            background: #0056b3;
+            transform: scale(1.05);
         }
-        p {
-            font-size: 16px;
-            color: #555;
+
+        .font-item:active {
+            transform: scale(0.98);
         }
+
+        /* Specifické styly pro fonty */
+        .font-patrick-hand { font-family: 'Patrick Hand', sans-serif; }
+        .font-caveat { font-family: 'Caveat', sans-serif; }
+        .font-quicksand { font-family: 'Quicksand', sans-serif; }
+        .font-itim { font-family: 'Itim', sans-serif; }
+        .font-dongle { font-family: 'Dongle', sans-serif; font-size: 2.5rem; }
     </style>
-    <!-- Bezpečné přesměrování pomocí meta tagu -->
-    <meta id="redirectMeta" http-equiv="refresh" content="3;url=https://fonts.google.com/specimen/Patrick+Hand?preview.text=%E2%80%9ET%C5%99%C3%ADda%209.B%20z%20Gymn%C3%A1zia%20pana%20Nov%C3%A1ka%20m%C3%A1%20t%C5%99%C3%ADdn%C3%ADho%20u%C4%8Ditele%20Karla%20%C4%8Cerm%C3%A1ka.%20Ondra%20Eli%C5%A1ka%20Kuba%20Yassine%20P%C3%A1ja%20Natka%20David%20Kl%C3%A1rka%20Jarka%20Zuzka%E2%80%9C&preview.size=45&lang=cs_Latn">
 </head>
 <body>
-    <h1>Bezpečné přesměrování na fonty</h1>
-    <p>Pokud nejste automaticky přesměrováni, klikněte na <a href="https://fonts.google.com/specimen/Patrick+Hand?preview.text=%E2%80%9ET%C5%99%C3%ADda%209.B%20z%20Gymn%C3%A1zia%20pana%20Nov%C3%A1ka%20m%C3%A1%20t%C5%99%C3%ADdn%C3%ADho%20u%C4%8Ditele%20Karla%20%C4%8Cerm%C3%A1ka.%20Ondra%20Eli%C5%A1ka%20Kuba%20Yassine%20P%C3%A1ja%20Natka%20David%20Kl%C3%A1rka%20Jarka%20Zuzka%E2%80%9C&preview.size=45&lang=cs_Latn">odkaz zde</a>.</p>
-    <p>Pokud přesměrování trvá déle, ověřte prosím vaše připojení k internetu.</p>
+    <h1>Vyberte si Font</h1>
+    <p>Tlačítka níže tě přesměrují na stránku vybraného fontu.</p>
+    <ul>
+        <li><a href="font/Patrick-Hand/" class="font-item font-patrick-hand">Patrick Hand</a></li>
+        <li><a href="font/Caveat/" class="font-item font-caveat">Caveat</a></li>
+        <li><a href="font/Quicksand/" class="font-item font-quicksand">Quicksand</a></li>
+        <li><a href="font/Itim/" class="font-item font-itim">Itim</a></li>
+        <li><a href="font/Dongle/" class="font-item font-dongle">Dongle</a></li>
+    </ul>
+    <footer>
+        <p>Vytvořeno, protože jsem nechtěl posílat dlouhé odkazy :D. &copy; 2025</p>
+    </footer>
 </body>
 </html>
